@@ -84,7 +84,7 @@ function checkWinner() {
   //     var place1 = WINNING_COMBOS[i][0]
   //     var place2 = WINNING_COMBOS[i][1]
   //     var place3 = WINNING_COMBOS[i][2]
-  // 
+  //
   //     if(board[place1]  != "" && board[place1] === board[place2] && board[place2] === board[place3]){
   //       winner = board[place1]
   //       return true
@@ -93,6 +93,7 @@ function checkWinner() {
       if (checkState(WINNING_COMBOS[i], current_state())){
 
       return true;
+    }
   }
   return false
 }
