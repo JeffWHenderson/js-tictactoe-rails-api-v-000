@@ -16,7 +16,7 @@ function attachListeners() {
     saveGame()
   })
 
-  $("#previous").on("click", function(e){  // do after you get Xs and Ys on board
+  $("#previous").on("click", function(e){ 
     e.preventDefault()
     previousGames()
   })
