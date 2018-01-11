@@ -54,7 +54,9 @@ function player() {
   }
 }
 
-
+function currentState() {
+  return board
+}
 
 function updateState(thatMove){
   if ($(thatMove).text() === '') {
@@ -138,8 +140,4 @@ function clearGame(){
   currentGame = 0
   $('td').empty()
   board = ["", "", "", "", "", "", "", "", ""]
-}
-
-function currentBoard() {
-  return board
 }
