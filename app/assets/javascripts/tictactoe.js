@@ -80,15 +80,19 @@ function checkState(combo, board){
 }
 
 function checkWinner() {
-  for(let i = 0; i < WINNING_COMBOS.length -1; i++){
-      var place1 = WINNING_COMBOS[i][0]
-      var place2 = WINNING_COMBOS[i][1]
-      var place3 = WINNING_COMBOS[i][2]
+  // for(let i = 0; i < WINNING_COMBOS.length -1; i++){
+  //     var place1 = WINNING_COMBOS[i][0]
+  //     var place2 = WINNING_COMBOS[i][1]
+  //     var place3 = WINNING_COMBOS[i][2]
+  // 
+  //     if(board[place1]  != "" && board[place1] === board[place2] && board[place2] === board[place3]){
+  //       winner = board[place1]
+  //       return true
+      // }
+    for(i = 0; i < WINNING_COMBOS.length; i++){
+      if (checkState(WINNING_COMBOS[i], current_state())){
 
-      if(board[place1]  != "" && board[place1] === board[place2] && board[place2] === board[place3]){
-        winner = board[place1]
-        return true
-      }
+      return true;
   }
   return false
 }
