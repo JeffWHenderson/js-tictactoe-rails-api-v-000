@@ -16,7 +16,7 @@ function attachListeners() {
     saveGame()
   })
 
-  $("#previous").on("click", function(e){ 
+  $("#previous").on("click", function(e){
     e.preventDefault()
     previousGames()
   })
@@ -72,6 +72,12 @@ function setMessage(string) {
   $("#message").text(string)
 }
 
+function checkState(combo, board){
+  if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
+    winner = board[combo[1]]
+    return true;
+  };
+}
 
 function checkWinner() {
   for(let i = 0; i < WINNING_COMBOS.length -1; i++){
